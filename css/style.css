@@ -1,0 +1,165 @@
+body{
+  margin: 0;
+  padding: 0;
+  background:
+    linear-gradient(
+     rgba(50,50,50, 0.45),
+     rgba(50,50,50, 0.45)
+   ),
+  url("../assets/bg.jpg");
+  background-size: cover;
+}
+
+header,main,footer{
+  width:792px;
+  margin: auto;
+}
+
+
+/************
+Navigation bar
+************/
+
+/*Size social icons and make them white*/
+header svg{
+  height:40px;
+  width: 40px;
+  fill: white;
+}
+
+/*Create red box around navigation links*/
+.nav-button{
+  display: inline-block;
+  height:20px;
+  width: 170px;
+  background-color: #B4292E;
+  margin: 2px;
+  text-align: center;
+  padding:2px;
+}
+
+/*Format navigation links and subscribe link*/
+header a{
+  color:white;
+  text-decoration: none;
+  font-size: small;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+/*create small white dots in global nav*/
+.dot{
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  display: block;
+  vertical-align: middle;
+  margin: 1.5px;
+}
+
+/*align dot next to subscribe*/
+.global-nav .cols4:nth-child(3) .dot{
+  display: inline-block;
+}
+
+/*align dot column next to social buttons*/
+.dot-column{
+  height: 40px;
+  display: inline-block;
+}
+
+.global-nav{
+  margin-top:10px;
+}
+
+/*format social buttons in global nav*/
+.global-nav svg:nth-child(1){
+  background-color: #445897;
+}
+
+
+/*create dash for navigation link boxes*/
+.dash{
+  content: '';
+  height: 1px;
+  width: 6px;
+  color: white;
+}
+
+/************
+Column Setup
+************/
+
+.cols2,.cols3,.cols4{
+  display: inline-block;
+}
+
+.cols2{
+  width:380px;
+}
+.cols3{
+  width:238px;
+}
+.cols4{
+  width: 190px;
+}
+/************
+Main Body
+************/
+
+/*create white box around each news article*/
+.articles section{
+  background-color: white;
+  height: 270px;
+  font-size: small;
+  vertical-align: top;
+}
+
+/*slightly lightens the article headlines*/
+h2{
+  font-weight: lighter;
+  color:#383934;
+}
+
+/*changes font of article publication dates*/
+.date{
+  color: lightgrey;
+  size:small;
+}
+
+/*changes font of article text*/
+.article-text{
+  color: #555555;
+  size:small;
+}
+
+/*changes font of read more link*/
+.read-more{
+  text-decoration: none;
+  color:red;
+  text-transform: uppercase;
+  font-size: small;
+  text-align: center;
+  margin:0 72px;
+}
+
+.read-more:before{
+  content:'[ ';
+}
+.read-more:after{
+  content:' ]';
+}
+
+
+/************
+Footer/contact section
+************/
+
+/*Size social icons and make them gray*/
+footer svg{
+  height:20px;
+  width: 20px;
+  fill:#9B9B9B;
+}
