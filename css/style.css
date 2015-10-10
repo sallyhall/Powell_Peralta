@@ -1,3 +1,8 @@
+/********
+body formatting
+********/
+
+/*set body background*/
 body{
   margin: 0;
   padding: 0;
@@ -10,12 +15,46 @@ body{
   background-size: cover;
 }
 
+/*set main element size*/
+header,main,footer{
+  width:792px;
+  margin: auto;
+}
+
+/*gray bar under elements*/
+#tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
+      box-shadow: 0 5px rgba(190, 190, 190, 0.5);
+}
+
+/************
+left tag
+************/
+
+/*position tag to stay while scrolling*/
 #tag{
-  position: absolute;
-  top: 475px;
+  position: fixed;
   left: 50px;
 }
 
+:target #tag-label{
+  display: block;
+}
+
+/*hides tag headings*/
+#tag-label{
+  display: none;
+  position: fixed;
+  top: 258px;
+  left: 60px;
+  width: 155px;
+  text-transform: uppercase;
+  color: white;
+  font-size: large;
+  text-align: center;
+}
+
+
+/*create rectangle part of tag*/
 #tag-left {
   content: '';
   background-color: #B4292E;
@@ -24,30 +63,27 @@ body{
   margin-left: 20px;
   margin-top: 55px;
   position: relative;
-  top: 244px;
+  top: 144px;
   width: 155px;
   left: -19px;
-  text-transform: uppercase;
-  color: white;
-  font-size: large;
   padding: 30px 10px;
 }
+
+/*create triangle tag shadow*/
 #tag-right {
   position: absolute;
   left: 175px;
-  top: 338px;
+  top: 238px;
   content: "";
   height: 0;
   width: 0;
   border-left: 22px solid rgba(190, 190, 190, 0.5);
-  /*border-top: 38px solid transparent;*/
   border-bottom: 43px solid transparent;
   z-index: 1;
 }
 
-
+/*create triangle part of tag*/
 #tag-right:after {
-  /*border-left: 20px solid rgba(190, 190, 190, 0.5);*/
   position: absolute;
   left: -22px;
   top: -38px;
@@ -60,18 +96,8 @@ body{
   z-index: 2;
 }
 
-header,main,footer{
-  width:792px;
-  margin: auto;
-}
-
-/*gray bar under elements*/
-#tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
-      box-shadow: 0 5px rgba(190, 190, 190, 0.5);
-}
-
 /************
-Navigation bar
+global nav
 ************/
 
 /*Size social icons and make them white*/
@@ -80,15 +106,6 @@ header svg{
   width: 27px;
   padding: 7px;
   fill: white;
-}
-
-/*Create red box around navigation links*/
-.nav-button {
-  display: inline-block;
-  height:20px;
-  background-color: #B4292E;
-  text-align: center;
-  padding:2px;
 }
 
 /*Format navigation links and subscribe link*/
@@ -129,11 +146,11 @@ header a{
   bottom: 35px;
 }
 
+/*vertical align social buttons*/
 .social{
   position: relative;
   bottom: 20px;
 }
-
 
 /*align dot column next to social buttons*/
 .dot-column{
@@ -142,6 +159,7 @@ header a{
   margin-left: 55px;
 }
 
+/*set top margin*/
 .global-nav{
   margin-top:30px;
 }
@@ -164,6 +182,18 @@ header a{
   fill:#C46962;
 }
 
+/********
+nav bar
+********/
+
+/*Create red box around navigation links*/
+.nav-button {
+  display: inline-block;
+  height:20px;
+  background-color: #B4292E;
+  text-align: center;
+  padding:2px;
+}
 
 /*create dash for navigation link boxes*/
 .dash{
@@ -176,26 +206,38 @@ header a{
   margin: 0 14px;
 }
 
+/*animate dash to spin on hover*/
 .nav-button:hover .dash{
   -webkit-animation: dash-spin .5s;
 }
+
+/*animate dashes on nav bar*/
+@-webkit-keyframes dash-spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(180deg);}
+}
+
 
 /************
 Column Setup
 ************/
 
+/*position columns*/
 .cols2,.cols3,.cols4{
   display: inline-block;
 }
 
+/*set two-column size*/
 .cols2{
   width:360px;
   vertical-align: top;
 }
+/*set three-column size*/
 .cols3{
   width: 257px;
   margin: 2px;
 }
+/*set four-column size*/
 .cols4{
   width: 190px;
 }
@@ -207,8 +249,9 @@ section:first-of-type{
 section:last-of-type{
   margin-right: 0;
 }
+
 /************
-Main Body
+image slider
 ************/
 
 /*white box around image slider*/
@@ -219,21 +262,7 @@ Main Body
   margin: 8px 0 0 0;
 }
 
-.graybar{
-  content: '';
-  height: 3px;
-  width: 100%;
-  background-color: gray;
-  display: inline-block;
-  margin-top: 0;
-  vertical-align: top;
-}
-
-.image-slider img{
-  width: 100%
-  position:relative;
-}
-
+/*puts grid over images*/
 .overlay{
   position: absolute;
   height: 271px;
@@ -242,28 +271,31 @@ Main Body
   z-index: 100;
 }
 
+/*puts logo over grid and images*/
 .logo{
   position: absolute;
   margin:16px;
   z-index: 50;
 }
 
+/*create image slider box*/
 .slider{
   height: 675px;
   margin-top: -100px;
   margin-left: -65px;
 }
 
+/*positions images in image slider*/
 .slider li{
   list-style: none;
   position: absolute;
   top: 119px;
   left: 332px;
-  /*overflow: hidden;*/
   height: 271px;
   width: 779px;
 }
 
+/*sizes and positions images in image slider*/
 .slider-img{
   position: absolute;
   overflow: hidden;
@@ -271,14 +303,12 @@ Main Body
   width: 779px;
 }
 
-.slider img{
-  vertical-align: top;
-}
-
+/*creates and hides toggle for choosing image in slider*/
 .slider input{
   display: none;
 }
 
+/*creates dots for selecting images*/
 .slider label{
   position: absolute;
   top: 285px;
@@ -287,29 +317,21 @@ Main Body
   height: 9px;
   border-radius: 9px;
   background-color: white;
-  display: inline-block;
   margin: 1.5px;
   box-shadow: 0 3px rgba(190, 190, 190, 0.5);
   z-index: 10;
-  display: run-in;
 }
 
+/*gives dot for current picture red center*/
 .slider li input:checked ~ label{
-  position: absolute;
-  top: 285px;
-  content: '';
   width: 3px;
   height: 3px;
   border-radius: 5px;
   background-color: red;
   border:3px solid white;
-  display: inline-block;
-  margin: 1.5px;
-  box-shadow: 0 3px rgba(190, 190, 190, 0.5);
-  z-index: 10;
 }
 
-
+/*positions image slider dots*/
 .slider li:nth-child(1) label{
   left: 375px;
 }
@@ -320,6 +342,7 @@ Main Body
   left: 404px;
 }
 
+/*sizes images for slider*/
 .slider li:nth-child(1) img{
   width: 1200px;
 }
@@ -330,12 +353,14 @@ Main Body
   width: 900px;
 }
 
+/*hides not selected images, defines transitions between images*/
 .slider-img img{
   opacity: 0;
   visibility: hidden;
   transition: .5s;
 }
 
+/*unhides selected image*/
 .slider li input:checked ~ .slider-img img{
   opacity: 1;
   visibility: visible;
@@ -345,23 +370,9 @@ Main Body
   position: absolute;
 }
 
-/*center image slider dots*/
-/*.image-slider-control{
-  width:42px;
-  margin:auto;
-}*/
-
-/*create dots below image slider*/
-/*.image-dot{
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  background-color: white;
-  display: inline-block;
-  margin: 1.5px;
-  box-shadow: 0 3px rgba(190, 190, 190, 0.5);
-}*/
+/************
+news section
+************/
 
 /*create white box around each news article*/
 .articles section{
@@ -373,7 +384,7 @@ Main Body
   width: 237px;
   position: relative;
   margin-bottom: 8px;
-  margin-top: 8px;
+  margin-top: 30px;
 }
 
 /*slightly lightens the article headlines*/
@@ -414,44 +425,50 @@ h2{
   content:' ]';
 }
 
-/*format skater section*/
+/************
+skater section
+************/
 
+/*sets display property for skater containers*/
 .skaters-row, .skaters-side, .skaters-main, .skater1, .skater2{
   display: inline-block;
 }
 
+/*sets the size of the left three skaters*/
 .skaters-main{
   width: 523px;
 }
 
+/*positions first three skaters, adds white border, hides extra parts of pictures*/
 .skater1, .skater2, .skater3{
   position: relative;
-  background-color: red;
   overflow: hidden;
   border: 8px solid white;
   margin: 8px 0 0 0;
 }
-.skater1 img, .skater2 img, .skater3 img{
-}
 
+/*scales and positions first and second skater picture*/
 .skater1 img{
   height: 184px;
 }
-
+/*adjusts first skater picture*/
 #lance{
   margin-left: -75px;
 }
 
-.skater3 img{
-  height: 486px;
-  margin-left: -503px;
-}
-
+/*scales and positions second skater picture*/
 .skater2 img{
   width: 540px;
   margin-top: -65px;
 }
 
+/*scales and positions second skater picture*/
+.skater3 img{
+  height: 486px;
+  margin-left: -503px;
+}
+
+/*formats and positions skater name over picture*/
 .skater1 h1, .skater2 h1, .skater3 h1{
   color:white;
   position: absolute;
@@ -461,22 +478,26 @@ h2{
   text-align: center;
 }
 
+/*formats and positions skater name over picture for tall picture*/
 .skater3 h1{
   top:45%;
 }
 
+/*sizes skater picture box*/
 .skater1{
   width:241px;
   margin:2px;
   height:184px;
 }
 
+/*sizes skater picture box*/
 .skater2{
   width: 506px;
   margin: 2px;
   height: 184px;
 }
 
+/*sizes skater picture box*/
 .skater3{
   width: 241px;
   margin: 2px;
@@ -484,14 +505,18 @@ h2{
   left:5px;
 }
 
+/************
+skateboard section
+************/
 
-/*Format skateboard section*/
+/*creates white box behind skateboards*/
 .skateboards{
   width:100%;
   background-color: white;
   margin:25px 0;
 }
 
+/*sizes skateboard pictures*/
 .skateboards img{
   margin: 5px 6px;
   height: 255px;
@@ -501,7 +526,7 @@ h2{
 Footer/contact section
 ************/
 
-/*Size social icons and make them gray*/
+/*create white footer box*/
 footer{
   background-color: white;
   width: 743px;
@@ -510,11 +535,13 @@ footer{
   margin-bottom: 70px;
 }
 
+/*size social icons*/
 footer svg{
   height:13px;
   width: 13px;
   padding:5px;
 }
+
 /*format social buttons in footer*/
 footer .facebook{
   background-color: #4E4E4E;
@@ -534,16 +561,14 @@ footer .youtube{
 }
 
 /*format form elements*/
-.contact-form{
+button, input, select, textarea {
   color: #B9B9B9;
   font-weight: lighter;
-}
-
-button, input, select, textarea {
   font-family : inherit;
   font-size   : 100%;
 }
 
+/*size and form boxes and create border*/
 input, textarea{
   width:100%;
   height:35px;
@@ -555,15 +580,15 @@ input, textarea{
   border-right: 1px solid #B9B9B9;
 }
 
-
+/*set red border on invalid inputs*/
 input:focus:required:invalid{
   border: 5px solid red;
 }
-
 textarea:focus:required:invalid{
   border: 5px solid red;
 }
 
+/*set gray border on valid inputs*/
 input:required:valid{
   border-top: 4px solid #B9B9B9;
   border-left: 4px solid #B9B9B9;
@@ -577,9 +602,13 @@ textarea:required:valid{
   border-bottom: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
 }
+
+/*increase height of message area*/
 textarea{
   height: 100px;
 }
+
+/*format submit button*/
 button{
   height:36px;
   background-color: #B4292E;
@@ -590,11 +619,4 @@ button{
   text-transform: uppercase;
   color:white;
   width: 225px;
-}
-
-
-/*animate dashes on nav bar*/
-@-webkit-keyframes dash-spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(180deg);}
 }
