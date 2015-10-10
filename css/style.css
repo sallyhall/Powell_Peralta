@@ -3,8 +3,8 @@ body{
   padding: 0;
   background:
     linear-gradient(
-     rgba(50,50,50, 0.45),
-     rgba(50,50,50, 0.45)
+     rgba(20,20,20, 0.45),
+     rgba(20,20,20, 0.45)
    ),
   url("../assets/bg.jpg");
   background-size: cover;
@@ -16,7 +16,7 @@ header,main,footer{
 }
 
 /*gray bar under elements*/
-header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
+header svg, .nav-button, .image-slider, .articles section, .skateboards, footer{
   border-bottom: 3px solid gray;
 }
 
@@ -117,7 +117,10 @@ header a{
   content: '';
   height: 1px;
   width: 6px;
-  color: white;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 14px;
 }
 
 /************
@@ -155,7 +158,17 @@ Main Body
   height: 270px;
   overflow: hidden;
   border: 8px solid white;
-  margin: 8px 0;
+  margin: 8px 0 0 0;
+}
+
+.graybar{
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: gray;
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: top;
 }
 
 .image-slider img{
@@ -247,6 +260,77 @@ h2{
   content:' ]';
 }
 
+/*format skater section*/
+
+.skaters-row, .skaters-side, .skaters-main, .skater1, .skater2{
+  display: inline-block;
+}
+
+.skaters-main{
+  width: 523px;
+}
+
+.skater1, .skater2, .skater3{
+  position: relative;
+  background-color: red;
+  overflow: hidden;
+  border: 8px solid white;
+  margin: 8px 0 0 0;
+}
+.skater1 img, .skater2 img, .skater3 img{
+}
+
+.skater1 img{
+  height: 184px;
+}
+
+#lance{
+  margin-left: -75px;
+}
+
+.skater3 img{
+  height: 486px;
+  margin-left: -503px;
+}
+
+.skater2 img{
+  width: 540px;
+  margin-top: -65px;
+}
+
+.skater1 h1, .skater2 h1, .skater3 h1{
+  color:white;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.skater3 h1{
+  top:45%;
+}
+
+.skater1{
+  width:241px;
+  margin:2px;
+  height:184px;
+}
+
+.skater2{
+  width: 504px;
+  margin: 2px;
+  height: 184px;
+}
+
+.skater3{
+  width: 241px;
+  margin: 2px;
+  height: 393px;
+}
+
+
+/*Format skateboard section*/
 .skateboards{
   width:100%;
   background-color: white;
@@ -268,6 +352,7 @@ footer{
   width: 778px;
   height: 280px;
   padding:25px;
+  margin-bottom: 70px;
 }
 
 footer svg{
