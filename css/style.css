@@ -10,14 +10,64 @@ body{
   background-size: cover;
 }
 
+#tag{
+  position: absolute;
+  top: 475px;
+  left: 50px;
+}
+
+#tag-left {
+  content: '';
+  background-color: #B4292E;
+  display: inline-block;
+  height: 18px;
+  margin-left: 20px;
+  margin-top: 55px;
+  position: relative;
+  top: 244px;
+  width: 155px;
+  left: -20px;
+  text-transform: uppercase;
+  color: white;
+  font-size: large;
+  padding: 30px 10px;
+}
+#tag-right {
+  position: absolute;
+  left: 175px;
+  top: 338px;
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 22px solid rgba(190, 190, 190, 0.5);
+  /*border-top: 38px solid transparent;*/
+  border-bottom: 43px solid transparent;
+  z-index: 1;
+}
+
+
+#tag-right:after {
+  /*border-left: 20px solid rgba(190, 190, 190, 0.5);*/
+  position: absolute;
+  left: -21px;
+  top: -38px;
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 20px solid #B4292E;
+  border-top: 39px solid transparent;
+  border-bottom: 38px solid transparent;
+  z-index: 2;
+}
+
 header,main,footer{
   width:792px;
   margin: auto;
 }
 
 /*gray bar under elements*/
-header svg, .nav-button, .image-slider, .articles section, .skateboards, footer{
-  border-bottom: 3px solid gray;
+#tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
+      box-shadow: 0 5px rgba(190, 190, 190, 0.5);
 }
 
 /************
@@ -33,12 +83,10 @@ header svg{
 }
 
 /*Create red box around navigation links*/
-.nav-button{
+.nav-button {
   display: inline-block;
   height:20px;
-  /*width: 186px;*/
   background-color: #B4292E;
-  /*margin: 2px;*/
   text-align: center;
   padding:2px;
 }
@@ -78,19 +126,24 @@ header a{
 /*vertical align subscribe*/
 .subscribe{
   position: relative;
+  bottom: 35px;
+}
+
+.social{
+  position: relative;
   bottom: 20px;
 }
 
 
 /*align dot column next to social buttons*/
 .dot-column{
-  height: 40px;
+  height: 35px;
   display: inline-block;
   margin-left: 55px;
 }
 
 .global-nav{
-  margin-top:10px;
+  margin-top:30px;
 }
 
 /*format social buttons in global nav*/
@@ -132,7 +185,8 @@ Column Setup
 }
 
 .cols2{
-  width:380px;
+  width:360px;
+  vertical-align: top;
 }
 .cols3{
   width: 257px;
@@ -209,6 +263,7 @@ Main Body
   background-color: white;
   display: inline-block;
   margin: 1.5px;
+  box-shadow: 0 3px rgba(190, 190, 190, 0.5);
 }
 
 /*create white box around each news article*/
@@ -220,6 +275,7 @@ Main Body
   padding: 10px;
   width: 237px;
   position: relative;
+  margin-bottom: 8px;
 }
 
 /*slightly lightens the article headlines*/
@@ -318,7 +374,7 @@ h2{
 }
 
 .skater2{
-  width: 504px;
+  width: 506px;
   margin: 2px;
   height: 184px;
 }
@@ -327,6 +383,7 @@ h2{
   width: 241px;
   margin: 2px;
   height: 393px;
+  left:5px;
 }
 
 
@@ -349,8 +406,8 @@ Footer/contact section
 /*Size social icons and make them gray*/
 footer{
   background-color: white;
-  width: 778px;
-  height: 280px;
+  width: 743px;
+  height: 325;
   padding:25px;
   margin-bottom: 70px;
 }
@@ -397,7 +454,7 @@ input, textarea{
   border-left: 4px solid #B9B9B9;
   border-bottom: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 textarea{
