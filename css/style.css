@@ -15,6 +15,10 @@ header,main,footer{
   margin: auto;
 }
 
+/*gray bar under elements*/
+header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
+  border-bottom: 3px solid gray;
+}
 
 /************
 Navigation bar
@@ -22,8 +26,9 @@ Navigation bar
 
 /*Size social icons and make them white*/
 header svg{
-  height:40px;
-  width: 40px;
+  height:27px;
+  width: 27px;
+  padding: 7px;
   fill: white;
 }
 
@@ -31,9 +36,9 @@ header svg{
 .nav-button{
   display: inline-block;
   height:20px;
-  width: 170px;
+  /*width: 186px;*/
   background-color: #B4292E;
-  margin: 2px;
+  /*margin: 2px;*/
   text-align: center;
   padding:2px;
 }
@@ -45,6 +50,7 @@ header a{
   font-size: small;
   font-weight: lighter;
   text-transform: uppercase;
+  margin: 1px;
 }
 
 /*create small white dots in global nav*/
@@ -60,14 +66,27 @@ header a{
 }
 
 /*align dot next to subscribe*/
-.global-nav .cols4:nth-child(3) .dot{
+.subscribe .dot{
   display: inline-block;
 }
+
+/*align subscribe*/
+.subscribe a{
+  padding-left: 160px;
+}
+
+/*vertical align subscribe*/
+.subscribe{
+  position: relative;
+  bottom: 20px;
+}
+
 
 /*align dot column next to social buttons*/
 .dot-column{
   height: 40px;
   display: inline-block;
+  margin-left: 55px;
 }
 
 .global-nav{
@@ -75,8 +94,21 @@ header a{
 }
 
 /*format social buttons in global nav*/
-.global-nav svg:nth-child(1){
+.facebook{
   background-color: #445897;
+  fill:#7482B0;
+}
+.rss{
+  background-color: #CC8F32;
+  fill:#D3AC68;
+}
+.twitter{
+  background-color: #6A8DC7;
+  fill:#8FAAD5;
+}
+.youtube{
+  background-color: #B2382D;
+  fill:#C46962;
 }
 
 
@@ -100,14 +132,71 @@ Column Setup
   width:380px;
 }
 .cols3{
-  width:238px;
+  width: 257px;
+  margin: 2px;
 }
 .cols4{
   width: 190px;
 }
+
+/*removes margins outside columns*/
+section:first-of-type{
+  margin-left: 0;
+}
+section:last-of-type{
+  margin-right: 0;
+}
 /************
 Main Body
 ************/
+
+/*white box around image slider*/
+.image-slider{
+  height: 270px;
+  overflow: hidden;
+  border: 8px solid white;
+  margin: 8px 0;
+}
+
+.image-slider img{
+  width: 100%
+  position:relative;
+}
+
+.overlay{
+  position: absolute;
+  height: 271px;
+  width: 779px;
+  opacity: .75;
+}
+
+.logo{
+  position: absolute;
+  margin:16px;
+}
+
+.slider{
+  height: 675px;
+  margin-top: -100px;
+  margin-left: -65px;
+}
+
+/*center image slider dots*/
+.image-slider-control{
+  width:42px;
+  margin:auto;
+}
+
+/*create dots below image slider*/
+.image-dot{
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: white;
+  display: inline-block;
+  margin: 1.5px;
+}
 
 /*create white box around each news article*/
 .articles section{
@@ -115,6 +204,9 @@ Main Body
   height: 270px;
   font-size: small;
   vertical-align: top;
+  padding: 10px;
+  width: 237px;
+  position: relative;
 }
 
 /*slightly lightens the article headlines*/
@@ -142,9 +234,12 @@ h2{
   text-transform: uppercase;
   font-size: small;
   text-align: center;
-  margin:0 72px;
+  margin:0 71px;
+  position: absolute;
+  bottom:10px;
 }
 
+/*adds [] around the read more link*/
 .read-more:before{
   content:'[ ';
 }
@@ -152,14 +247,85 @@ h2{
   content:' ]';
 }
 
+.skateboards{
+  width:100%;
+  background-color: white;
+  margin:25px 0;
+}
+
+.skateboards img{
+  margin: 5px 6px;
+  height: 255px;
+}
 
 /************
 Footer/contact section
 ************/
 
 /*Size social icons and make them gray*/
+footer{
+  background-color: white;
+  width: 778px;
+  height: 280px;
+  padding:25px;
+}
+
 footer svg{
-  height:20px;
-  width: 20px;
+  height:13px;
+  width: 13px;
+  padding:5px;
+}
+/*format social buttons in footer*/
+footer .facebook{
+  background-color: #4E4E4E;
   fill:#9B9B9B;
+}
+footer .rss{
+  background-color: #AEAEAE;
+  fill:#9B9B9B;
+}
+footer .twitter{
+  background-color: #7B7B7B;
+  fill:#9B9B9B;
+}
+footer .youtube{
+  background-color: #7F7F7F;
+  fill:#9B9B9B;
+}
+
+/*format form elements*/
+.contact-form{
+  color: #B9B9B9;
+  font-weight: lighter;
+}
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
+
+input, textarea{
+  width:100%;
+  height:35px;
+  margin:8px;
+  border-top: 4px solid #B9B9B9;
+  border-left: 4px solid #B9B9B9;
+  border-bottom: 1px solid #B9B9B9;
+  border-right: 1px solid #B9B9B9;
+  padding: 0 10px;
+}
+
+textarea{
+  height: 100px;
+}
+button{
+  height:36px;
+  background-color: #B4292E;
+  text-align: center;
+  padding:2px;
+  float: right;
+  border: none;
+  text-transform: uppercase;
+  color:white;
+  width: 225px;
 }
