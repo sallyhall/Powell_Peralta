@@ -176,6 +176,10 @@ header a{
   margin: 0 14px;
 }
 
+.nav-button:hover .dash{
+  -webkit-animation: dash-spin .5s;
+}
+
 /************
 Column Setup
 ************/
@@ -470,4 +474,11 @@ button{
   text-transform: uppercase;
   color:white;
   width: 225px;
+}
+
+
+/*animate dashes on nav bar*/
+@-webkit-keyframes dash-spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(180deg);}
 }
