@@ -26,7 +26,7 @@ body{
   position: relative;
   top: 244px;
   width: 155px;
-  left: -20px;
+  left: -19px;
   text-transform: uppercase;
   color: white;
   font-size: large;
@@ -49,7 +49,7 @@ body{
 #tag-right:after {
   /*border-left: 20px solid rgba(190, 190, 190, 0.5);*/
   position: absolute;
-  left: -21px;
+  left: -22px;
   top: -38px;
   content: "";
   height: 0;
@@ -239,11 +239,13 @@ Main Body
   height: 271px;
   width: 779px;
   opacity: .75;
+  z-index: 100;
 }
 
 .logo{
   position: absolute;
   margin:16px;
+  z-index: 50;
 }
 
 .slider{
@@ -252,14 +254,105 @@ Main Body
   margin-left: -65px;
 }
 
-/*center image slider dots*/
-.image-slider-control{
-  width:42px;
-  margin:auto;
+.slider li{
+  list-style: none;
+  position: absolute;
+  top: 119px;
+  left: 332px;
+  /*overflow: hidden;*/
+  height: 271px;
+  width: 779px;
 }
 
+.slider-img{
+  position: absolute;
+  overflow: hidden;
+  height: 271px;
+  width: 779px;
+}
+
+.slider img{
+  vertical-align: top;
+}
+
+.slider input{
+  display: none;
+}
+
+.slider label{
+  position: absolute;
+  top: 285px;
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 9px;
+  background-color: white;
+  display: inline-block;
+  margin: 1.5px;
+  box-shadow: 0 3px rgba(190, 190, 190, 0.5);
+  z-index: 10;
+  display: run-in;
+}
+
+.slider li input:checked ~ label{
+  position: absolute;
+  top: 285px;
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: red;
+  border:3px solid white;
+  display: inline-block;
+  margin: 1.5px;
+  box-shadow: 0 3px rgba(190, 190, 190, 0.5);
+  z-index: 10;
+}
+
+
+.slider li:nth-child(1) label{
+  left: 375px;
+}
+.slider li:nth-child(2) label{
+  left: 389px;
+}
+.slider li:nth-child(3) label{
+  left: 404px;
+}
+
+.slider li:nth-child(1) img{
+  width: 1200px;
+}
+.slider li:nth-child(2) img{
+  width: 1000px;
+}
+.slider li:nth-child(3) img{
+  width: 900px;
+}
+
+.slider-img img{
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+
+.slider li input:checked ~ .slider-img img{
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  top: -120px;
+  left: -120px;
+  position: absolute;
+}
+
+/*center image slider dots*/
+/*.image-slider-control{
+  width:42px;
+  margin:auto;
+}*/
+
 /*create dots below image slider*/
-.image-dot{
+/*.image-dot{
   content: '';
   width: 8px;
   height: 8px;
@@ -268,7 +361,7 @@ Main Body
   display: inline-block;
   margin: 1.5px;
   box-shadow: 0 3px rgba(190, 190, 190, 0.5);
-}
+}*/
 
 /*create white box around each news article*/
 .articles section{
@@ -280,6 +373,7 @@ Main Body
   width: 237px;
   position: relative;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 /*slightly lightens the article headlines*/

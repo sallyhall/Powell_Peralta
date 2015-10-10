@@ -52,16 +52,38 @@
       <div class="image-slider">
         <img class="overlay"src="assets/grid.png">
         <img class="logo"src="assets/peralta-logo.png">
-        <img class="slider" src="assets/top-image.png">
+        <ul class="slider">
+          <li>
+            <input type="radio" id="slide1" name="slide" checked>
+            <label for="slide1"></label>
+            <div class="slider-img">
+              <img src="assets/top-image.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="slide2" name="slide">
+            <label for="slide2"></label>
+            <div class="slider-img">
+              <img src="assets/girlskate.jpg">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="slide3" name="slide">
+            <label for="slide3"></label>
+            <div class="slider-img">
+              <img src="assets/dogskate2.png">
+            </div>
+          </li>
+        </ul>
       </div><span class="graybar"></span>
-      <div class="image-slider-control">
+      <!-- <div class="image-slider-control">
         <div class="image-dot">
         </div>
         <div class="image-dot">
         </div>
         <div class="image-dot">
         </div>
-      </div>
+      </div> -->
     </header>
     <main>
       <div class="articles">
@@ -149,15 +171,15 @@
         <form action="/contact-form" method="post">
           <div>
             <input type="text" required id="name" name="user_name" value="NAME" onfocus="if
-(this.value==this.defaultValue) this.value='';">
+(this.value==this.defaultValue) this.value='';" onblur="if(this.value=='') this.value=this.defaultValue;">
           </div>
           <div>
             <input type="email" required id="email" name="user_email" value="EMAIL" onfocus="if
-(this.value==this.defaultValue) this.value='';">
+(this.value==this.defaultValue) this.value='';"  onblur="if(this.value=='') this.value=this.defaultValue;">
           </div>
           <div>
             <textarea required id="msg" name="user_message" onfocus="if
-(this.value==this.defaultValue) this.value='';">YOUR MESSAGE</textarea>
+(this.value==this.defaultValue) this.value='';" onblur="if(this.value=='') this.value=this.defaultValue;">YOUR MESSAGE</textarea>
           </div>
           <div class="button">
             <button type="submit">Submit</button>
