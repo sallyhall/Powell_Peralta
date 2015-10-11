@@ -13,13 +13,11 @@ body{
    ),
   url("../assets/bg.jpg");
   background-size: cover;
-  font-family: 'Didact Gothic', sans-serif;
-  color: #747474;
 }
 
 /*set main element size*/
 header,main,footer{
-  width:792px;
+  width:55%;
   margin: auto;
 }
 
@@ -35,66 +33,32 @@ left tag
 /*position tag to stay while scrolling*/
 #tag{
   position: fixed;
-  left: 50px;
+  left: 3%;
 }
 
 :target #tag-label{
   display: block;
 }
 
-/*hides tag headings*/
-/*#tag-label{
-  display: none;
-  position: fixed;
-  top: 258px;
-  left: 60px;
-  width: 155px;
-  text-transform: uppercase;
-  color: white;
-  font-size: large;
-  text-align: center;
-}*/
-
-.home-tag, .news-tag, .skater-tag, .board-tag, .contact-tag{
-  position: fixed;
-  top: 258px;
-  left: 60px;
-  width: 155px;
-  text-transform: uppercase;
-  color: white;
-  font-size: large;
-  text-align: center;
-}
-
-.home-tag{
-  content:'home';
-}
-.news-tag{
-  content:'sk8t news';
-}
-.skater-tag{
-  content:'skateboarders';
-}
-.board-tag{
-  content:'board design';
-}
-.contact-tag{
-  content:'contact us';
-}
 
 
 /*create rectangle part of tag*/
 .tag-left {
   background-color: #B4292E;
   display: inline-block;
-  height: 18px;
+  height: 1%;
   margin-left: 20px;
-  margin-top: 55px;
+  margin-top: 30%;
   position: relative;
   top: 144px;
-  width: 155px;
+  width: 10.7%;
   left: -19px;
   padding: 30px 10px;
+  text-transform: uppercase;
+  color: white;
+  font-size: large;
+  text-align: center;
+
 }
 
 /*create triangle tag shadow*/
@@ -144,7 +108,6 @@ header a{
   font-weight: lighter;
   text-transform: uppercase;
   margin: 1px;
-  padding: 1px;
 }
 
 /*create small white dots in global nav*/
@@ -537,12 +500,11 @@ skater section
 
 /*white box around image slider*/
 .footer-slider{
-  width: 791px;
+  width: 751px;
   height: 200px;
   background-color: white;
   margin:25px 0;
   overflow: hidden;
-  padding: 0;
 }
 
 
@@ -556,22 +518,9 @@ skater section
 .footer-slider-img{
   position: absolute;
   overflow: hidden;
-  height: 200px;
-  width: 791px;
+  height: 271px;
+  width: 779px;
 }
-
-/*animate skateboards to spin on hover*/
-.footer-slider-img:hover{
-  -webkit-animation: board-spin .5s;
-}
-
-/*animate dashes on nav bar*/
-@-webkit-keyframes board-spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-}
-
-
 
 /*creates and hides toggle for choosing image in slider*/
 .footer-slider input{
@@ -609,7 +558,7 @@ skater section
   transition: .5s;
   transform: rotate(90deg);
   top: -25px;
-  left: 364px;
+  left: 310px;
   position: absolute;
 }
 
@@ -618,39 +567,38 @@ skater section
   opacity: 1;
   visibility: visible;
   z-index: 10;
-  border-radius: 38px/52px;
 }
 
 /*positions image slider dots*/
 .footer-slider li:nth-child(1) label{
-  left: 321px;
+  left: 275px;
 }
 .footer-slider li:nth-child(2) label{
-  left: 336px;
+  left: 290px;
 }
 .footer-slider li:nth-child(3) label{
-  left: 351px;
+  left: 305px;
 }
 .footer-slider li:nth-child(4) label{
-  left: 366px;
+  left: 320px;
 }
 .footer-slider li:nth-child(5) label{
-  left: 381px;
+  left: 335px;
 }
 .footer-slider li:nth-child(6) label{
-  left: 396px;
+  left: 350px;
 }
 .footer-slider li:nth-child(7) label{
-  left: 411px;
+  left: 365px;
 }
 .footer-slider li:nth-child(8) label{
-  left: 426px;
+  left: 380px;
 }
 .footer-slider li:nth-child(9) label{
-  left: 441px;
+  left: 395px;
 }
 .footer-slider li:nth-child(10) label{
-  left: 456px;
+  left: 410px;
 }
 
 /************
