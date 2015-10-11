@@ -560,19 +560,6 @@ skater section
   width: 791px;
 }
 
-/*animate skateboards to spin on hover*/
-.footer-slider-img:hover{
-  -webkit-animation: board-spin .5s;
-}
-
-/*animate dashes on nav bar*/
-@-webkit-keyframes board-spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-}
-
-
-
 /*creates and hides toggle for choosing image in slider*/
 .footer-slider input{
   display: none;
@@ -607,19 +594,27 @@ skater section
   opacity: 0;
   visibility: hidden;
   transition: .5s;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   top: -25px;
   left: 364px;
   position: absolute;
 }
 
-/*unhides selected image*/
+/*unhides and animates selected image*/
 .footer-slider li input:checked ~ .footer-slider-img img{
   opacity: 1;
   visibility: visible;
   z-index: 10;
   border-radius: 38px/52px;
+  -webkit-animation: board-spin .5s;
 }
+
+/*rotate skateboards*/
+@-webkit-keyframes board-spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 
 /*positions image slider dots*/
 .footer-slider li:nth-child(1) label{
