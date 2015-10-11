@@ -2,15 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Powell Peralta</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <a href="#">
     <div id="tag">
-      <div id="tag-left">
-      </div><div id="tag-right"></div>
+      <div class="tag-left home-tag">
+        skateboarders
+      </div><div class="tag-right"></div>
     </div>
     </a>
     <header>
@@ -33,22 +35,22 @@
       <div class="nav">
         <div class="cols4 nav-button">
           <span class="dash"></span>
-          <a href="#news">Sk8t News</a>
+          <a "#newsnav" href="#news">Sk8t News</a>
           <div class="dash"></div>
         </div>
         <div class="cols4 nav-button">
           <div class="dash"></div>
-          <a href="#skaters">Skateboarders</a>
+          <a "skatersnav" href="#skaters">Skateboarders</a>
           <div class="dash"></div>
         </div>
         <div class="cols4 nav-button">
           <div class="dash"></div>
-          <a href="#boards">Board Design</a>
+          <a "#boardsnav" href="#boards">Board Design</a>
           <div class="dash"></div>
         </div>
         <div class="cols4 nav-button">
           <div class="dash"></div>
-          <a href="#contact">Contact Us</a>
+          <a "contactnav" href="#contact">Contact Us</a>
           <div class="dash"></div>
         </div>
       </div>
@@ -83,9 +85,6 @@
     <main>
       <div class="articles">
         <a name="news">
-          <div id="tag-label">
-            sk8 news
-          </div>
         </a>
         <section class="cols3">
             <h2>Tony Hawk Foundation Raises Big Money At Celeb Fundraiser</h2>
@@ -114,9 +113,6 @@
       </div>
       <div class="skaters">
         <a name="skaters">
-          <div id="tag-label">
-            skateboarders
-          </div>
         </a>
         <div class="skaters-main">
           <div class="skaters-row">
@@ -145,28 +141,84 @@
       </div>
       <div class="skateboards">
         <a name="boards">
-          <div id="tag-label">
-            board design
-          </div>
         </a>
-        <img class="board" src="assets/sk8-1.png" alt="Panda Skateboard">
-        <img class="board" src="assets/sk8-2.png" alt="Monkey Skateboard">
-        <img class="board" src="assets/sk8-3.png" alt="Message Skateboard">
-        <img class="board" src="assets/sk8-4.png" alt="Gagnam Skateboard">
-        <img class="board" src="assets/sk8-5.png" alt="Hungover Skateboard">
-        <img class="board" src="assets/sk8-6.png" alt="Shecks Skateboard">
-        <img class="board" src="assets/sk8-7.png" alt="Jesus Fernandez Skateboard">
-        <img class="board" src="assets/sk8-8.png" alt="Alien Skateboard">
-        <img class="board" src="assets/sk8-9.png" alt="Elephant Skateboard">
-        <img class="board" src="assets/sk8-10.png" alt="Skull Skateboard">
+        <ul class="footer-slider">
+          <li>
+            <input type="radio" id="footer-slide1" name="footer-slide" checked>
+            <label for="footer-slide1"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-1.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide2" name="footer-slide">
+            <label for="footer-slide2"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-2.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide3" name="footer-slide">
+            <label for="footer-slide3"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-3.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide4" name="footer-slide">
+            <label for="footer-slide4"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-4.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide5" name="footer-slide">
+            <label for="footer-slide5"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-5.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide6" name="footer-slide">
+            <label for="footer-slide6"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-6.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide7" name="footer-slide">
+            <label for="footer-slide7"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-7.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide8" name="footer-slide">
+            <label for="footer-slide8"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-8.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide9" name="footer-slide">
+            <label for="footer-slide9"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-9.png">
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="footer-slide10" name="footer-slide">
+            <label for="footer-slide10"></label>
+            <div class="footer-slider-img">
+              <img src="assets/sk8-10.png">
+            </div>
+          </li>
+        </ul>
       </div>
     </main>
     <footer>
       <div class="contact-info cols2">
         <a name="contact">
-          <div id="tag-label">
-            contact us
-          </div>
         </a>
         <h3>Contact Us for More Information</h3>
         <p>

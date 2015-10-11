@@ -13,6 +13,8 @@ body{
    ),
   url("../assets/bg.jpg");
   background-size: cover;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #747474;
 }
 
 /*set main element size*/
@@ -22,7 +24,7 @@ header,main,footer{
 }
 
 /*gray bar under elements*/
-#tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
+.tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
       box-shadow: 0 5px rgba(190, 190, 190, 0.5);
 }
 
@@ -41,8 +43,19 @@ left tag
 }
 
 /*hides tag headings*/
-#tag-label{
+/*#tag-label{
   display: none;
+  position: fixed;
+  top: 258px;
+  left: 60px;
+  width: 155px;
+  text-transform: uppercase;
+  color: white;
+  font-size: large;
+  text-align: center;
+}*/
+
+.home-tag, .news-tag, .skater-tag, .board-tag, .contact-tag{
   position: fixed;
   top: 258px;
   left: 60px;
@@ -53,10 +66,25 @@ left tag
   text-align: center;
 }
 
+.home-tag{
+  content:'home';
+}
+.news-tag{
+  content:'sk8t news';
+}
+.skater-tag{
+  content:'skateboarders';
+}
+.board-tag{
+  content:'board design';
+}
+.contact-tag{
+  content:'contact us';
+}
+
 
 /*create rectangle part of tag*/
-#tag-left {
-  content: '';
+.tag-left {
   background-color: #B4292E;
   display: inline-block;
   height: 18px;
@@ -70,7 +98,7 @@ left tag
 }
 
 /*create triangle tag shadow*/
-#tag-right {
+.tag-right {
   position: absolute;
   left: 175px;
   top: 238px;
@@ -83,7 +111,7 @@ left tag
 }
 
 /*create triangle part of tag*/
-#tag-right:after {
+.tag-right:after {
   position: absolute;
   left: -22px;
   top: -38px;
@@ -251,7 +279,7 @@ section:last-of-type{
 }
 
 /************
-image slider
+header image slider
 ************/
 
 /*white box around image slider*/
@@ -458,14 +486,14 @@ skater section
 
 /*scales and positions second skater picture*/
 .skater2 img{
-  width: 540px;
-  margin-top: -65px;
+  width: 557px;
+  margin-top: -78px;
 }
 
 /*scales and positions second skater picture*/
 .skater3 img{
-  height: 486px;
-  margin-left: -503px;
+  height: 392px;
+  margin-left: -363px;
 }
 
 /*formats and positions skater name over picture*/
@@ -505,21 +533,108 @@ skater section
   left:5px;
 }
 
-/************
-skateboard section
-************/
 
-/*creates white box behind skateboards*/
-.skateboards{
-  width:100%;
+/*white box around image slider*/
+.footer-slider{
+  width: 751px;
+  height: 200px;
   background-color: white;
   margin:25px 0;
+  overflow: hidden;
 }
 
-/*sizes skateboard pictures*/
-.skateboards img{
-  margin: 5px 6px;
-  height: 255px;
+
+/*positions images in image slider*/
+.footer-slider li{
+  list-style: none;
+  position: absolute;
+}
+
+/*sizes and positions images in image slider*/
+.footer-slider-img{
+  position: absolute;
+  overflow: hidden;
+  height: 271px;
+  width: 779px;
+}
+
+/*creates and hides toggle for choosing image in slider*/
+.footer-slider input{
+  display: none;
+}
+
+/*creates dots for selecting images*/
+.footer-slider label{
+  position: absolute;
+  top: 207px;
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 9px;
+  background-color: white;
+  margin: 1.5px;
+  box-shadow: 0 3px rgba(190, 190, 190, 0.5);
+  z-index: 10;
+}
+
+/*gives dot for current picture red center*/
+.footer-slider li input:checked ~ label{
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: red;
+  border:3px solid white;
+}
+
+
+/*hides not selected images, defines transitions between images*/
+.footer-slider-img img{
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  transform: rotate(90deg);
+  top: -25px;
+  left: 310px;
+  position: absolute;
+}
+
+/*unhides selected image*/
+.footer-slider li input:checked ~ .footer-slider-img img{
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+/*positions image slider dots*/
+.footer-slider li:nth-child(1) label{
+  left: 275px;
+}
+.footer-slider li:nth-child(2) label{
+  left: 290px;
+}
+.footer-slider li:nth-child(3) label{
+  left: 305px;
+}
+.footer-slider li:nth-child(4) label{
+  left: 320px;
+}
+.footer-slider li:nth-child(5) label{
+  left: 335px;
+}
+.footer-slider li:nth-child(6) label{
+  left: 350px;
+}
+.footer-slider li:nth-child(7) label{
+  left: 365px;
+}
+.footer-slider li:nth-child(8) label{
+  left: 380px;
+}
+.footer-slider li:nth-child(9) label{
+  left: 395px;
+}
+.footer-slider li:nth-child(10) label{
+  left: 410px;
 }
 
 /************
@@ -619,4 +734,16 @@ button{
   text-transform: uppercase;
   color:white;
   width: 225px;
+}
+
+
+/*****
+trying to fix the tag thing here
+*****/
+
+#contact a{
+  width: 1px;
+  height: 1px;
+  content: '';
+  display: inline;
 }
