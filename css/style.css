@@ -144,6 +144,7 @@ header a{
   font-weight: lighter;
   text-transform: uppercase;
   margin: 1px;
+  padding: 1px;
 }
 
 /*create small white dots in global nav*/
