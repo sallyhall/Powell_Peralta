@@ -95,6 +95,10 @@ left tag
   width: 155px;
   left: -19px;
   padding: 30px 10px;
+  text-transform: uppercase;
+  color: white;
+  font-size: large;
+  text-align: center;
 }
 
 /*create triangle tag shadow*/

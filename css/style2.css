@@ -13,6 +13,8 @@ body{
    ),
   url("../assets/bg.jpg");
   background-size: cover;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #747474;
 }
 
 /*set main element size*/
@@ -33,7 +35,7 @@ left tag
 /*position tag to stay while scrolling*/
 #tag{
   position: fixed;
-  left: 3%;
+  left: 3.5%;
 }
 
 :target #tag-label{
@@ -41,31 +43,29 @@ left tag
 }
 
 
-
 /*create rectangle part of tag*/
 .tag-left {
   background-color: #B4292E;
   display: inline-block;
-  height: 1%;
-  margin-left: 20px;
+  height: 36%;
+  margin-left: 11%;
   margin-top: 30%;
   position: relative;
   top: 144px;
-  width: 10.7%;
-  left: -19px;
-  padding: 30px 10px;
+  width: 103%;
+  left: -11%;
+  padding: 17% 5.6%;
   text-transform: uppercase;
   color: white;
   font-size: large;
   text-align: center;
-
 }
 
 /*create triangle tag shadow*/
 .tag-right {
   position: absolute;
-  left: 175px;
-  top: 238px;
+  left: 114%;
+  top: 225px;
   content: "";
   height: 0;
   width: 0;
@@ -108,6 +108,7 @@ header a{
   font-weight: lighter;
   text-transform: uppercase;
   margin: 1px;
+  padding: 1px;
 }
 
 /*create small white dots in global nav*/
@@ -153,7 +154,7 @@ header a{
 
 /*set top margin*/
 .global-nav{
-  margin-top:30px;
+  margin-top:4%;
 }
 
 /*format social buttons in global nav*/
@@ -500,11 +501,12 @@ skater section
 
 /*white box around image slider*/
 .footer-slider{
-  width: 751px;
+  width: 791px;
   height: 200px;
   background-color: white;
   margin:25px 0;
   overflow: hidden;
+  padding: 0;
 }
 
 
@@ -518,8 +520,8 @@ skater section
 .footer-slider-img{
   position: absolute;
   overflow: hidden;
-  height: 271px;
-  width: 779px;
+  height: 200px;
+  width: 791px;
 }
 
 /*creates and hides toggle for choosing image in slider*/
@@ -556,49 +558,58 @@ skater section
   opacity: 0;
   visibility: hidden;
   transition: .5s;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   top: -25px;
-  left: 310px;
+  left: 364px;
   position: absolute;
 }
 
-/*unhides selected image*/
+/*unhides and animates selected image*/
 .footer-slider li input:checked ~ .footer-slider-img img{
   opacity: 1;
   visibility: visible;
   z-index: 10;
+  border-radius: 38px/52px;
+  -webkit-animation: board-spin .5s;
 }
+
+/*rotate skateboards*/
+@-webkit-keyframes board-spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 
 /*positions image slider dots*/
 .footer-slider li:nth-child(1) label{
-  left: 275px;
+  left: 321px;
 }
 .footer-slider li:nth-child(2) label{
-  left: 290px;
+  left: 336px;
 }
 .footer-slider li:nth-child(3) label{
-  left: 305px;
+  left: 351px;
 }
 .footer-slider li:nth-child(4) label{
-  left: 320px;
+  left: 366px;
 }
 .footer-slider li:nth-child(5) label{
-  left: 335px;
+  left: 381px;
 }
 .footer-slider li:nth-child(6) label{
-  left: 350px;
+  left: 396px;
 }
 .footer-slider li:nth-child(7) label{
-  left: 365px;
+  left: 411px;
 }
 .footer-slider li:nth-child(8) label{
-  left: 380px;
+  left: 426px;
 }
 .footer-slider li:nth-child(9) label{
-  left: 395px;
+  left: 441px;
 }
 .footer-slider li:nth-child(10) label{
-  left: 410px;
+  left: 456px;
 }
 
 /************
@@ -698,16 +709,4 @@ button{
   text-transform: uppercase;
   color:white;
   width: 225px;
-}
-
-
-/*****
-trying to fix the tag thing here
-*****/
-
-#contact a{
-  width: 1px;
-  height: 1px;
-  content: '';
-  display: inline;
 }
