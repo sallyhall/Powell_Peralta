@@ -276,9 +276,6 @@ Column Setup
 }
 
 /*removes margins outside columns*/
-section:first-of-type{
-  margin-left: 0;
-}
 section:last-of-type{
   margin-right: 0;
 }
