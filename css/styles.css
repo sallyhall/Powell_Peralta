@@ -1,0 +1,551 @@
+#tag {
+  position: fixed;
+  left: 3.5%; }
+  @media screen and (max-width: 1200px) {
+    #tag {
+      display: none; } }
+
+/*create rectangle part of tag*/
+.tag-left {
+  background-color: #B4292E;
+  display: inline-block;
+  height: 36%;
+  margin-left: 11%;
+  margin-top: 200%;
+  position: relative;
+  width: 103%;
+  left: -11%;
+  padding: 17% 5.6%;
+  text-transform: uppercase;
+  color: white;
+  font-size: large;
+  text-align: center; }
+
+/*create triangle tag shadow*/
+.tag-right {
+  position: absolute;
+  left: 103%;
+  margin-top: -25%;
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 1.375em solid rgba(190, 190, 190, 0.5);
+  border-bottom: 2.6875em solid transparent;
+  z-index: 1; }
+  .tag-right:after {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    left: -1.375em;
+    top: -2.375em;
+    border-left: 1.253em solid #B4292E;
+    border-top: 2.4375em solid transparent;
+    border-bottom: 2.375em solid transparent;
+    z-index: 2; }
+
+/*white box around image slider*/
+.board-slider {
+  width: 100%;
+  background-color: white;
+  margin: 3.125rem 0;
+  padding: 0; }
+
+/*positions images in image slider*/
+.board-slider li {
+  list-style: none;
+  text-align: center; }
+
+/*sizes and positions images in image slider*/
+.board-slider-img {
+  overflow: hidden;
+  width: 100%; }
+
+/*creates and hides toggle for choosing image in slider*/
+.board-slider input {
+  display: none; }
+
+/*hides not selected images, defines transitions between images*/
+.board-slider-img img {
+  opacity: 0;
+  display: none;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg); }
+
+.board-slider li input:checked ~ .board-slider-img img {
+  opacity: 1;
+  display: inline;
+  border-radius: 2.375em/3.25em;
+  -webkit-animation: board-spin 0.5s; }
+
+/*rotate skateboards*/
+@-webkit-keyframes board-spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; }
+
+header, main, footer {
+  width: 55%;
+  margin: auto; }
+  @media screen and (max-width: 450px) {
+    header, main, footer {
+      width: 80%;
+      margin: auto; } }
+
+aside {
+  width: 20%; }
+
+/*position columns*/
+.cols2, .cols3, .cols4 {
+  display: inline-block; }
+
+/*set two-column size*/
+.cols2 {
+  width: 48%;
+  vertical-align: top; }
+
+/*set three-column size*/
+.cols3 {
+  width: 30%;
+  margin: .25%; }
+
+/*set four-column size*/
+.cols4 {
+  width: 24.6%; }
+  @media screen and (max-width: 1200px) {
+    .cols4 {
+      width: 60%; } }
+
+/*set body background*/
+body {
+  background: linear-gradient(rgba(20, 20, 20, 0.45), rgba(20, 20, 20, 0.45)), url("../assets/bg.jpg");
+  background-size: cover;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #747474; }
+
+/*gray bar under elements*/
+.tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer {
+  box-shadow: 0 0.3125em rgba(190, 190, 190, 0.5); }
+
+/*create white footer box*/
+footer {
+  background-color: white;
+  padding: 1.5625em;
+  margin-bottom: 4.375em; }
+
+/*size social icons*/
+footer svg {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.5rem; }
+
+/*format social buttons in footer*/
+footer .facebook {
+  background-color: #4E4E4E;
+  fill: #9B9B9B; }
+
+footer .rss {
+  background-color: #AEAEAE;
+  fill: #9B9B9B; }
+
+footer .twitter {
+  background-color: #7B7B7B;
+  fill: #9B9B9B; }
+
+footer .youtube {
+  background-color: #7F7F7F;
+  fill: #9B9B9B; }
+
+/*format form elements*/
+button, input, select, textarea {
+  color: #B9B9B9;
+  font-weight: lighter;
+  font-family: inherit;
+  font-size: 100%; }
+
+/*size and form boxes and create border*/
+input, textarea {
+  width: 100%;
+  height: 2.1875em;
+  margin: 0.5em;
+  padding: 0.875em;
+  border-top: 0.25em solid #B9B9B9;
+  border-left: 0.25em solid #B9B9B9;
+  border-bottom: 0.0625em solid #B9B9B9;
+  border-right: 0.0625em solid #B9B9B9; }
+
+/*set red border on invalid inputs*/
+input:focus:required:invalid {
+  border: 0.3125em solid red; }
+
+textarea:focus:required:invalid {
+  border: 0.3125em solid red; }
+
+/*set gray border on valid inputs*/
+input:required:valid {
+  border-top: 0.25em solid #B9B9B9;
+  border-left: 0.25em solid #B9B9B9;
+  border-bottom: 0.0625em solid #B9B9B9;
+  border-right: 0.0625em solid #B9B9B9; }
+
+textarea:required:valid {
+  border-top: 0.25em solid #B9B9B9;
+  border-left: 0.25em solid #B9B9B9;
+  border-bottom: 0.0625em solid #B9B9B9;
+  border-right: 0.0625em solid #B9B9B9; }
+
+/*increase height of message area*/
+textarea {
+  height: 6.25em; }
+
+/*format submit button*/
+button {
+  height: 2.25em;
+  background-color: #B4292E;
+  text-align: center;
+  padding: 0.125em;
+  float: right;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  width: 60%; }
+
+@media screen and (max-width: 1200px) {
+  .cols2 {
+    width: 100%; } }
+
+.dot {
+  display: block;
+  vertical-align: middle;
+  margin: 0.09375em; }
+
+.subscribe .dot {
+  display: inline-block; }
+  @media screen and (max-width: 1200px) {
+    .subscribe .dot {
+      display: none; } }
+
+.subscribe {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 50%;
+  padding-bottom: 2%; }
+  @media screen and (max-width: 1200px) {
+    .subscribe {
+      background-color: #CC8F32;
+      padding-left: 0;
+      font-size: .8rem; } }
+
+/*align dot column next to social buttons*/
+.dot-column {
+  height: 100%;
+  display: inline-block;
+  margin-left: 10%; }
+  @media screen and (max-width: 1200px) {
+    .dot-column {
+      display: none; } }
+
+/*set top margin*/
+.global-nav {
+  margin-top: 4%;
+  text-align: right; }
+
+/*Create red box around navigation links*/
+.nav-button {
+  display: inline-block;
+  background-color: #B4292E;
+  text-align: center;
+  padding: .125em; }
+  @media screen and (max-width: 1200px) {
+    .nav-button {
+      padding: 0;
+      display: block; } }
+
+/*format social buttons in global nav*/
+.facebook {
+  background-color: #445897;
+  fill: #7482B0; }
+
+.rss {
+  background-color: #CC8F32;
+  fill: #D3AC68; }
+
+.twitter {
+  background-color: #6A8DC7;
+  fill: #8FAAD5; }
+
+.youtube {
+  background-color: #B2382D;
+  fill: #C46962; }
+
+/*Size social icons and make them white*/
+header svg {
+  width: 3%;
+  padding: 1%;
+  fill: white; }
+  @media screen and (max-width: 1200px) {
+    header svg {
+      display: none; } }
+
+/*create small white dots in global nav*/
+.dot {
+  content: '';
+  width: .25em;
+  height: .25em;
+  border-radius: .25em;
+  background-color: white; }
+
+/*Format navigation links and subscribe link*/
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin: 0.0625em;
+  padding: 0.0625em; }
+
+/*create dash for navigation link boxes*/
+.dash {
+  content: '';
+  height: 0.0625em;
+  width: .375em;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.25em; }
+  @media screen and (max-width: 1200px) {
+    .dash {
+      display: none; } }
+
+/*animate dash to spin on hover*/
+.nav-button:hover .dash {
+  -webkit-animation: dash-spin 0.5s; }
+
+/*animate dashes on nav bar*/
+@-webkit-keyframes dash-spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
+
+@media (max-width: 750) {
+  .subscribe {
+    display: none; } }
+
+/*white box around image slider*/
+.image-slider {
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  border: .5rem solid white;
+  margin: .5rem 0 0 0; }
+
+/*puts grid over images*/
+.overlay {
+  width: 100%;
+  opacity: .75;
+  position: absolute;
+  top: 0; }
+
+/*puts logo over grid and images*/
+.logo {
+  position: absolute;
+  margin: 1%;
+  top: 0;
+  width: 60%; }
+
+.slider {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+  .slider li {
+    list-style: none;
+    width: 100%;
+    /*positions image slider dots*/ }
+    .slider li img {
+      width: 100%; }
+
+/*creates dots for selecting images*/
+label {
+  display: inline-block;
+  content: '';
+  width: 0.5625em;
+  height: 0.5625em;
+  border-radius: 0.5625em;
+  background-color: white;
+  margin: 0.09375em;
+  box-shadow: 0 0.1875em rgba(190, 190, 190, 0.5); }
+
+.label-container {
+  text-align: center; }
+
+/*sizes and positions images in image slider*/
+.slider-img {
+  overflow: hidden;
+  width: 100%; }
+
+/*hides not selected images, defines transitions between images*/
+.slider-img img {
+  opacity: 0;
+  display: none;
+  transition: all 0.5s ease-in-out; }
+
+/*unhides selected image*/
+.board-slider li input, .slider li input {
+  display: none;
+  /*gives dot for current picture red center*/ }
+  .board-slider li input:checked ~ label, .slider li input:checked ~ label {
+    width: 0.1875em;
+    height: 0.1875em;
+    border-radius: 0.3125em;
+    background-color: red;
+    border: 0.1875em solid white; }
+  .board-slider li input:checked ~ .slider-img img, .slider li input:checked ~ .slider-img img {
+    opacity: 1;
+    display: inline-block; }
+
+.articles {
+  /*removes margins outside columns*/ }
+  .articles section {
+    background-color: white;
+    height: 16.875rem;
+    font-size: .8rem;
+    vertical-align: top;
+    padding: 0.875em;
+    width: 32.68%;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 1.875em; }
+    .articles section:first-of-type {
+      margin-left: 0; }
+    .articles section:last-of-type {
+      margin-right: 0; }
+    @media screen and (max-width: 1350px) {
+      .articles section {
+        display: block;
+        width: 100%; } }
+    @media screen and (max-width: 450px) {
+      .articles section {
+        height: 8rem; } }
+
+/*slightly lightens the article headlines*/
+h2 {
+  font-weight: lighter;
+  color: #383934; }
+
+/*changes font of article publication dates*/
+.date {
+  color: lightgrey;
+  font-size: .8rem; }
+
+/*changes font of article text*/
+.article-text {
+  color: #555555;
+  font-size: .7rem; }
+  @media screen and (max-width: 450px) {
+    .article-text {
+      display: none; } }
+
+/*changes font of read more link*/
+.read-more {
+  text-decoration: none;
+  color: red;
+  text-transform: uppercase;
+  font-size: .8rem;
+  text-align: center;
+  margin: 0 30%;
+  position: absolute;
+  bottom: 0.625em; }
+  @media screen and (max-width: 450px) {
+    .read-more {
+      width: 100%;
+      display: inline-block;
+      position: relative; } }
+
+/*adds [] around the read more link*/
+.read-more:before {
+  content: '[ '; }
+
+.read-more:after {
+  content: ' ]'; }
+
+.skaters {
+  font-size: 0; }
+
+/*sets display property for skater containers*/
+.skaters-row, .skaters-side, .skaters-main, .skater1, .skater2 {
+  display: inline-block; }
+
+.skaters-side {
+  width: 33%;
+  margin-left: 1%; }
+  .skaters-side img {
+    width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .skaters-side {
+      width: 100%; } }
+
+/*sets the size of the left three skaters*/
+.skaters-main {
+  width: 66%; }
+  .skaters-main img {
+    width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .skaters-main {
+      width: 100%; } }
+
+/*positions first three skaters, adds white border, hides extra parts of pictures*/
+.skater1, .skater2, .skater3 {
+  position: relative;
+  overflow: hidden;
+  border: 0.5rem solid white;
+  margin: 0.5rem 0 0 0;
+  /*formats and positions skater name over picture*/ }
+  .skater1 h1, .skater2 h1, .skater3 h1 {
+    color: white;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem; }
+    @media screen and (max-width: 1200px) {
+      .skater1 h1, .skater2 h1, .skater3 h1 {
+        top: -10%;
+        font-size: 1.5rem; } }
+
+/*formats and positions skater name over picture for tall picture*/
+.skater3 h1 {
+  top: 45%; }
+
+@media screen and (max-width: 1200px) {
+  .skater3 {
+    overflow: hidden;
+    height: 6rem; }
+    .skater3 img {
+      top: -140%;
+      position: absolute; } }
+
+/*sizes skater picture box*/
+.skater1 {
+  width: 49%; }
+
+.skaters-row a:last-child .skater1 {
+  margin-left: 1%; }

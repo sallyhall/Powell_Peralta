@@ -557,9 +557,7 @@ skater section
 .footer-slider-img{
   position: absolute;
   overflow: hidden;
-  height: 200px;
-  width: 791px;
-}
+ }
 
 /*creates and hides toggle for choosing image in slider*/
 .footer-slider input{

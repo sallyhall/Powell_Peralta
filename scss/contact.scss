@@ -1,0 +1,98 @@
+
+/*create white footer box*/
+footer{
+  background-color: white;
+  padding:1.5625em;
+  margin-bottom: 4.375em;
+}
+
+/*size social icons*/
+footer svg{
+  height:2rem;
+  width: 2rem;
+  padding:0.5rem;
+}
+
+/*format social buttons in footer*/
+footer .facebook{
+  background-color: #4E4E4E;
+  fill:#9B9B9B;
+}
+footer .rss{
+  background-color: #AEAEAE;
+  fill:#9B9B9B;
+}
+footer .twitter{
+  background-color: #7B7B7B;
+  fill:#9B9B9B;
+}
+footer .youtube{
+  background-color: #7F7F7F;
+  fill:#9B9B9B;
+}
+
+/*format form elements*/
+button, input, select, textarea {
+  color: #B9B9B9;
+  font-weight: lighter;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/*size and form boxes and create border*/
+input, textarea{
+  width:100%;
+  height:2.1875em;
+  margin: 0.5em;
+  padding: 0.875em;
+  border-top: 0.25em solid #B9B9B9;
+  border-left: 0.25em solid #B9B9B9;
+  border-bottom: 0.0625em solid #B9B9B9;
+  border-right: 0.0625em solid #B9B9B9;
+}
+
+/*set red border on invalid inputs*/
+input:focus:required:invalid{
+  border: 0.3125em solid red;
+}
+textarea:focus:required:invalid{
+  border: 0.3125em solid red;
+}
+
+/*set gray border on valid inputs*/
+input:required:valid{
+  border-top: 0.25em solid #B9B9B9;
+  border-left: 0.25em solid #B9B9B9;
+  border-bottom: 0.0625em solid #B9B9B9;
+  border-right: 0.0625em solid #B9B9B9;
+}
+
+textarea:required:valid{
+  border-top: 0.25em solid #B9B9B9;
+  border-left: 0.25em solid #B9B9B9;
+  border-bottom: 0.0625em solid #B9B9B9;
+  border-right: 0.0625em solid #B9B9B9;
+}
+
+/*increase height of message area*/textarea{
+  height: 6.25em;
+}
+
+/*format submit button*/
+button{
+  height:2.25em;
+  background-color: #B4292E;
+  text-align: center;
+  padding:0.125em;
+  float: right;
+  border: none;
+  text-transform: uppercase;
+  color:white;
+  width: 60%;
+}
+
+@media screen and (max-width: $break-large) {
+  .cols2{
+    width: 100%;
+  }
+}

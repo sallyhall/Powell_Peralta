@@ -1,0 +1,51 @@
+
+
+/*white box around image slider*/
+.board-slider{
+  width: 100%;
+  background-color: white;
+  margin:3.125rem 0;
+  padding: 0;
+}
+
+
+/*positions images in image slider*/
+.board-slider li{
+  list-style: none;
+  text-align: center;
+}
+
+/*sizes and positions images in image slider*/
+.board-slider-img{
+  overflow: hidden;
+  width: 100%
+}
+
+/*creates and hides toggle for choosing image in slider*/
+.board-slider input{
+  display: none;
+}
+
+
+
+/*hides not selected images, defines transitions between images*/
+.board-slider-img img{
+  opacity: 0;
+  display: none;
+  transition: all .5s ease-in-out;
+  transform: rotate(-90deg);
+}
+
+// /*unhides and animates selected image*/
+.board-slider li input:checked ~ .board-slider-img img{
+  opacity: 1;
+  display: inline;
+  border-radius: 2.375em/3.25em;
+  -webkit-animation: board-spin .5s;
+}
+
+/*rotate skateboards*/
+@-webkit-keyframes board-spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}

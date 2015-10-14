@@ -1,0 +1,77 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+// zero out body margin and padding
+body{
+  margin:0;
+  padding:0;
+  height: 100vh;
+}
+
+//set main element size
+header, main, footer{
+  width: 55%;
+  margin: auto;
+  @media screen and (max-width: $break-small) {
+    width:80%;
+    margin: auto;
+  }
+}
+
+aside{
+  width:20%;
+}
+
+
+/*position columns*/
+.cols2,.cols3,.cols4{
+  display: inline-block;
+}
+
+/*set two-column size*/
+.cols2{
+  width: 48%;
+  vertical-align: top;
+}
+/*set three-column size*/
+.cols3{
+  width: 30%;
+  margin: .25%;
+}
+/*set four-column size*/
+.cols4{
+  width: 24.6%;
+  @media screen and (max-width: $break-large) {
+    width: 60%;
+  }
+}
+
+
+
+/*set body background*/
+body{
+  background:
+    linear-gradient(
+     rgba(20,20,20, 0.45),
+     rgba(20,20,20, 0.45)
+   ),
+  url("../assets/bg.jpg");
+  background-size: cover;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #747474;
+}
+
+
+/*gray bar under elements*/
+.tag-left, header svg, .nav-button, .image-slider, .articles section, .skaters section, .skateboards, footer{
+      box-shadow: 0 0.3125em rgba(190, 190, 190, 0.5);
+}

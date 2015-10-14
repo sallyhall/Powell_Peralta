@@ -38,10 +38,6 @@ left tag
   left: 3.5%;
 }
 
-:target #tag-label{
-  display: block;
-}
-
 
 /*create rectangle part of tag*/
 .tag-left {

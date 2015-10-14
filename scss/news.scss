@@ -1,0 +1,73 @@
+.articles{
+  section{
+    background-color: white;
+    height: 16.875rem;
+    font-size: .8rem;
+    vertical-align: top;
+    padding: 0.875em;
+    width: 32.68%;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 1.875em;
+    &:first-of-type{
+      margin-left: 0;
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+    @media screen and (max-width: $break-xlarge) {
+      display: block;
+      width: 100%;
+    }
+    @media screen and (max-width: $break-small){
+      height: 8rem;
+    }
+  }
+  /*removes margins outside columns*/
+}
+
+/*slightly lightens the article headlines*/
+h2{
+  font-weight: lighter;
+  color:#383934;
+}
+
+/*changes font of article publication dates*/
+.date{
+  color: lightgrey;
+  font-size: .8rem;
+}
+
+/*changes font of article text*/
+.article-text{
+  color: #555555;
+  font-size: .7rem;
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+}
+
+/*changes font of read more link*/
+.read-more{
+  text-decoration: none;
+  color:red;
+  text-transform: uppercase;
+  font-size: .8rem;
+  text-align: center;
+  margin:0 30%;
+  position: absolute;
+  bottom:0.625em;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+  }
+}
+
+/*adds [] around the read more link*/
+.read-more:before{
+  content:'[ ';
+}
+.read-more:after{
+  content:' ]';
+}

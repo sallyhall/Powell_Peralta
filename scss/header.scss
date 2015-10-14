@@ -1,0 +1,139 @@
+
+//dot alignment
+.dot{
+  display: block;
+  vertical-align: middle;
+  margin: 0.09375em;
+}
+
+// align dot next to subscribe
+.subscribe .dot{
+  display: inline-block;
+  @media screen and (max-width: $break-large) {
+    display: none;
+  }
+}
+
+
+// align subscribe
+.subscribe{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 50%;
+  padding-bottom: 2%;
+  @media screen and (max-width: $break-large) {
+    background-color: #CC8F32;
+    padding-left: 0;
+    font-size: .8rem;
+  }
+}
+
+
+/*align dot column next to social buttons*/
+.dot-column{
+  height: 100%;
+  display: inline-block;
+  margin-left: 10%;
+  @media screen and (max-width: $break-large) {
+    display: none;
+  }
+}
+
+/*set top margin*/
+.global-nav{
+  margin-top:4%;
+  text-align: right;
+}
+
+/*Create red box around navigation links*/
+.nav-button {
+  display: inline-block;
+  background-color: $peraltaRed;
+  text-align: center;
+  padding:.125em;
+  @media screen and (max-width: $break-large) {
+    padding: 0;
+    display: block;
+  }
+}
+
+/*format social buttons in global nav*/
+.facebook{
+  background-color: #445897;
+  fill:#7482B0;
+}
+.rss{
+  background-color: #CC8F32;
+  fill:#D3AC68;
+}
+.twitter{
+  background-color: #6A8DC7;
+  fill:#8FAAD5;
+}
+.youtube{
+  background-color: #B2382D;
+  fill:#C46962;
+}
+
+/*Size social icons and make them white*/
+header svg{
+  width: 3%;
+  padding: 1%;
+  fill: white;
+  @media screen and (max-width: $break-large) {
+    display: none;
+  }
+}
+
+/*create small white dots in global nav*/
+.dot{
+  content: '';
+  width: .25em;
+  height: .25em;
+  border-radius: .25em;
+  background-color: white;
+}
+
+
+/*Format navigation links and subscribe link*/
+header a{
+  color:white;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin: 0.0625em;
+  padding: 0.0625em;
+}
+
+/*create dash for navigation link boxes*/
+.dash{
+  content: '';
+  height: 0.0625em;
+  width: .375em;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.25em;
+  @media screen and (max-width: $break-large) {
+    display: none;
+  }
+}
+
+/*animate dash to spin on hover*/
+.nav-button:hover .dash{
+  -webkit-animation: dash-spin .5s;
+}
+
+/*animate dashes on nav bar*/
+@-webkit-keyframes dash-spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(180deg);}
+}
+
+
+@media (max-width:750){
+  .subscribe{
+    display: none;
+  }
+}

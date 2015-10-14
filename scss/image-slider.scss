@@ -1,0 +1,86 @@
+
+/*white box around image slider*/
+.image-slider{
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  border: .5rem solid white;
+  margin: .5rem 0 0 0;
+}
+
+/*puts grid over images*/
+.overlay{
+  width: 100%;
+  opacity: .75;
+  position: absolute;
+  top: 0;
+}
+
+/*puts logo over grid and images*/
+.logo{
+  position: absolute;
+  margin: 1%;
+  top: 0;
+  width: 60%
+}
+
+.slider{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  li{
+      list-style: none;
+      width: 100%;
+      /*positions image slider dots*/
+      img{width: 100%;}
+    }
+}
+
+
+  /*creates dots for selecting images*/
+label{
+  display: inline-block;
+  content: '';
+  width: 0.5625em;
+  height:  0.5625em;
+  border-radius:  0.5625em;
+  background-color: white;
+  margin: 0.09375em;
+  box-shadow: 0 0.1875em rgba(190, 190, 190, 0.5);
+}
+
+.label-container{
+  text-align: center;
+}
+
+/*sizes and positions images in image slider*/
+.slider-img{
+  overflow: hidden;
+  width: 100%;
+}
+
+
+/*hides not selected images, defines transitions between images*/
+.slider-img img{
+  opacity: 0;
+  display:none;
+  transition: all .5s ease-in-out;
+}
+
+/*unhides selected image*/
+.board-slider li input, .slider li input{
+  display: none;
+  /*gives dot for current picture red center*/
+  //need to figure out how to make this work when they aren't siblings
+  &:checked ~ label{
+    width: 0.1875em;
+    height: 0.1875em;
+    border-radius: 0.3125em;
+    background-color: red;
+    border:0.1875em solid white;
+  }
+  &:checked ~ .slider-img img{
+    opacity: 1;
+    display:inline-block;
+  }
+}

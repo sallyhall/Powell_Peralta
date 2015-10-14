@@ -1,0 +1,75 @@
+.skaters{
+  font-size: 0;
+}
+/*sets display property for skater containers*/
+.skaters-row, .skaters-side, .skaters-main, .skater1, .skater2{
+  display: inline-block;
+}
+
+.skaters-side{
+  width: 33%;
+  margin-left: 1%;
+  img{
+    width: 100%;
+  }
+  @media screen and (max-width: $break-large) {
+    width: 100%;
+  }
+}
+
+/*sets the size of the left three skaters*/
+.skaters-main{
+  width: 66%;
+  img{
+    width: 100%;
+  }
+  @media screen and (max-width: $break-large) {
+    width: 100%;
+  }
+}
+
+/*positions first three skaters, adds white border, hides extra parts of pictures*/
+.skater1, .skater2, .skater3{
+  position: relative;
+  overflow: hidden;
+  border: 0.5rem solid white;
+  margin: 0.5rem 0 0 0;
+  /*formats and positions skater name over picture*/
+  h1{
+    color:white;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    @media screen and (max-width: $break-large) {
+      top: -10%;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+/*formats and positions skater name over picture for tall picture*/
+.skater3{
+  h1{
+    top:45%;
+  }
+  @media screen and (max-width: $break-large) {
+    overflow: hidden;
+    height: 6rem;
+    img{
+      top:-140%;
+      position: absolute;
+    }
+  }
+}
+/*sizes skater picture box*/
+.skater1{
+  width:49%;
+}
+
+.skaters-row a:last-child .skater1{
+  margin-left:1%;
+}
