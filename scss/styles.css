@@ -248,7 +248,9 @@ button {
   padding-bottom: 2%; }
   @media screen and (max-width: 1200px) {
     .subscribe {
-      display: none; } }
+      background-color: #CC8F32;
+      padding-left: 0;
+      font-size: .8rem; } }
 
 /*align dot column next to social buttons*/
 .dot-column {
@@ -273,8 +275,7 @@ button {
   @media screen and (max-width: 1200px) {
     .nav-button {
       padding: 0;
-      display: block;
-      margin: auto; } }
+      display: block; } }
 
 /*format social buttons in global nav*/
 .facebook {

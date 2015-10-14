@@ -22,9 +22,7 @@
   padding-left: 50%;
   padding-bottom: 2%;
   @media screen and (max-width: $break-large) {
-    background-color: #CC8F32;
-    padding-left: 0;
-    font-size: .8rem;
+    display: none;
   }
 }
 
@@ -54,6 +52,7 @@
   @media screen and (max-width: $break-large) {
     padding: 0;
     display: block;
+    margin:auto;
   }
 }
 
@@ -115,9 +114,6 @@ header a{
   display: inline-block;
   vertical-align: middle;
   margin: 0 0.25em;
-  @media screen and (max-width: $break-large) {
-    display: none;
-  }
 }
 
 /*animate dash to spin on hover*/
