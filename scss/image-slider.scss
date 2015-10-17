@@ -68,19 +68,25 @@ label{
 }
 
 /*unhides selected image*/
-.board-slider li input, .slider li input{
+.slider li input, .slider li input{
   display: none;
   /*gives dot for current picture red center*/
   //need to figure out how to make this work when they aren't siblings
-  &:checked ~ label{
-    width: 0.1875em;
-    height: 0.1875em;
-    border-radius: 0.3125em;
-    background-color: red;
-    border:0.1875em solid white;
-  }
   &:checked ~ .slider-img img{
     opacity: 1;
     display:inline-block;
   }
+}
+//
+// @for $i from 1 through 3{
+//   @if li:nth-child(#{$i}):input:checked{
+//     #{$checked}:#{$i};
+//   }
+// }
+
+
+$checked: {{
+  border-radius: 5px;
+  background-color: red;
+  border:3px solid white;
 }

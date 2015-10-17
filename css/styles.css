@@ -72,18 +72,19 @@
   transition: all 0.5s ease-in-out;
   transform: rotate(-90deg); }
 
-.board-slider li input:checked ~ .board-slider-img img {
-  opacity: 1;
-  display: inline;
-  border-radius: 2.375em/3.25em;
-  -webkit-animation: board-spin 0.5s; }
-
 /*rotate skateboards*/
 @-webkit-keyframes board-spin {
   0% {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.board-slider li input:checked ~ .board-slider-img img {
+  opacity: 1;
+  display: inline;
+  border-radius: 2.375em/3.25em;
+  -webkit-animation-name: board-spin;
+  -webkit-animation-duration: .5s; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -274,7 +275,8 @@ button {
     .nav-button {
       padding: 0;
       display: block;
-      margin: auto; } }
+      margin: auto;
+      font-size: small; } }
 
 /*format social buttons in global nav*/
 .facebook {
@@ -404,18 +406,17 @@ label {
   transition: all 0.5s ease-in-out; }
 
 /*unhides selected image*/
-.board-slider li input, .slider li input {
+.slider li input, .slider li input {
   display: none;
   /*gives dot for current picture red center*/ }
-  .board-slider li input:checked ~ label, .slider li input:checked ~ label {
-    width: 0.1875em;
-    height: 0.1875em;
-    border-radius: 0.3125em;
-    background-color: red;
-    border: 0.1875em solid white; }
-  .board-slider li input:checked ~ .slider-img img, .slider li input:checked ~ .slider-img img {
+  .slider li input:checked ~ .slider-img img, .slider li input:checked ~ .slider-img img {
     opacity: 1;
     display: inline-block; }
+
+label:nth-child(1) {
+  border-radius: 5px;
+  background-color: red;
+  border: 3px solid white; }
 
 .articles {
   /*removes margins outside columns*/ }

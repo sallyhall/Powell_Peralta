@@ -36,16 +36,18 @@
   transform: rotate(-90deg);
 }
 
-// /*unhides and animates selected image*/
-.board-slider li input:checked ~ .board-slider-img img{
-  opacity: 1;
-  display: inline;
-  border-radius: 2.375em/3.25em;
-  -webkit-animation: board-spin .5s;
-}
 
 /*rotate skateboards*/
 @-webkit-keyframes board-spin {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
+}
+
+// /*unhides and animates selected image*/
+.board-slider li input:checked ~ .board-slider-img img{
+  opacity: 1;
+  display: inline;
+  border-radius: 2.375em/3.25em;
+  -webkit-animation-name: board-spin;
+  -webkit-animation-duration: .5s;
 }
