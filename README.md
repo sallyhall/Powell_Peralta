@@ -1,5 +1,7 @@
 # Sk8 Site - Wireframe => HTML
 
+Class assignment. View live here: http://sallykingston.me/Powell_Peralta/
+
 ## Description
 Without fail, a front-end developer will need to convert a wireframe into a fully functioning website.
 
